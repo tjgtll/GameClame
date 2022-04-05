@@ -7,14 +7,40 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Images\Background.png" />
+    <None Remove="Images\Block-Empty.png" />
+    <None Remove="Images\Block-I.png" />
+    <None Remove="Images\Block-J.png" />
+    <None Remove="Images\Block-L.png" />
+    <None Remove="Images\Block-O.png" />
+    <None Remove="Images\Block-S.png" />
+    <None Remove="Images\Block-T.png" />
+    <None Remove="Images\Block-Z.png" />
     <None Remove="Images\clouds.png" />
     <None Remove="Images\clouds2.png" />
     <None Remove="Images\flappyBird.png" />
     <None Remove="Images\pipeBottom.png" />
     <None Remove="Images\pipeTop.png" />
+    <None Remove="Images\TileBlue.png" />
+    <None Remove="Images\TileCyan.png" />
+    <None Remove="Images\TileEmpty.png" />
+    <None Remove="Images\TileGreen.png" />
+    <None Remove="Images\TileOrange.png" />
+    <None Remove="Images\TilePurple.png" />
+    <None Remove="Images\TileRed.png" />
+    <None Remove="Images\TileYellow.png" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="Images\Background.png" />
+    <Resource Include="Images\Block-Empty.png" />
+    <Resource Include="Images\Block-I.png" />
+    <Resource Include="Images\Block-J.png" />
+    <Resource Include="Images\Block-L.png" />
+    <Resource Include="Images\Block-O.png" />
+    <Resource Include="Images\Block-S.png" />
+    <Resource Include="Images\Block-T.png" />
+    <Resource Include="Images\Block-Z.png" />
     <Resource Include="Images\clouds.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
@@ -30,6 +56,14 @@
     <Resource Include="Images\pipeTop.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\TileBlue.png" />
+    <Resource Include="Images\TileCyan.png" />
+    <Resource Include="Images\TileEmpty.png" />
+    <Resource Include="Images\TileGreen.png" />
+    <Resource Include="Images\TileOrange.png" />
+    <Resource Include="Images\TilePurple.png" />
+    <Resource Include="Images\TileRed.png" />
+    <Resource Include="Images\TileYellow.png" />
   </ItemGroup>
 
 </Project>

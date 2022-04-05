@@ -22,9 +22,15 @@ namespace GameClame
             InitializeComponent();
         }
 
-        private void Start_Click(object sender, RoutedEventArgs e)
+        private void FlappyBird_Click(object sender, RoutedEventArgs e)
         {
-            MainWindow OP = new MainWindow();
+            FlappyBird OP = new FlappyBird();
+            OP.Show();
+        }
+
+        private void Tetris_Click(object sender, RoutedEventArgs e)
+        {
+            TetrisWindow OP = new TetrisWindow();
             OP.Show();
         }
     }

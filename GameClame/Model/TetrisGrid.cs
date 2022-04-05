@@ -4,9 +4,9 @@ using System.Text;
 
 namespace GameClame.Model
 {
-    class TetrisGrid
+    public class TetrisGrid
     {
-        private readonly int[,] grid;   
+        private readonly int[,] grid;
 
         public int Rows { get; }
 
@@ -22,6 +22,7 @@ namespace GameClame.Model
         {
             Rows = rows;
             Columns = columns;
+            grid = new int[rows, columns];
         }
 
         public bool IsInside(int r,int c)
