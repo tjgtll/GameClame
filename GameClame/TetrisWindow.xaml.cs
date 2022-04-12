@@ -16,26 +16,26 @@ namespace GameClame
     {
         private readonly ImageSource[] tileImages = new ImageSource[]
         {
-            new BitmapImage(new Uri("Images/TileEmpty.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileCyan.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileBlue.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileOrange.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileYellow.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileGreen.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TilePurple.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/TileRed.png", UriKind.Relative))
+            new BitmapImage(new Uri("Images/Tetris/TileEmpty.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileCyan.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileBlue.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileOrange.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileYellow.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileGreen.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TilePurple.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/TileRed.png", UriKind.Relative))
         };
 
         private readonly ImageSource[] blockImages = new ImageSource[]
         {
-            new BitmapImage(new Uri("Images/Block-Empty.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-I.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-J.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-L.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-O.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-S.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-T.png", UriKind.Relative)),
-            new BitmapImage(new Uri("Images/Block-Z.png", UriKind.Relative))
+            new BitmapImage(new Uri("Images/Tetris/Block-Empty.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-I.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-J.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-L.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-O.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-S.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-T.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Block-Z.png", UriKind.Relative))
         };
 
         private readonly Image[,] imageControls;
@@ -134,7 +134,7 @@ namespace GameClame
             DrawBlock(gameState.CurrentBlock);
             DrawNextBlock(gameState.BlockQueue);
             DrawHeldBlock(gameState.HeldBlock);
-            ScoreText.Text = $"Score: {gameState.Score}";
+            ScoreText.Text = $"Счет: {gameState.Score}";
         }
 
         private async Task GameLoop()
@@ -150,7 +150,7 @@ namespace GameClame
             }
 
             GameOverMenu.Visibility = Visibility.Visible;
-            FinalScoreText.Text = $"Score: {gameState.Score}";
+            FinalScoreText.Text = $"Счет: {gameState.Score}";
         }
 
 

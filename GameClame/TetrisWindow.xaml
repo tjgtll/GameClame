@@ -23,7 +23,7 @@
         </Grid.ColumnDefinitions>
 
         <Grid.Background>
-            <ImageBrush ImageSource="Images/Background.png"/>
+            <ImageBrush ImageSource="Images/Tetris/Background.png"/>
         </Grid.Background>
 
         <Viewbox Grid.Row="1"
@@ -40,7 +40,7 @@
         <TextBlock x:Name="ScoreText"
                    Grid.Row="0"
                    Grid.Column="1"
-                   Text="Score: "
+                   Text="Счет: "
                    Margin="0, 10"
                    TextAlignment="Center"/>
 
@@ -48,7 +48,7 @@
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Right">
-            <TextBlock Text="Hold"
+            <TextBlock Text="Удерживающий"
                        TextAlignment="Center"/>
 
             <Image x:Name="HoldImage"
@@ -60,7 +60,7 @@
                     Grid.Column="2"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Left">
-            <TextBlock Text="Next"
+            <TextBlock Text="Следующий"
                        TextAlignment="Center"/>
 
             <Image x:Name="NextImage"

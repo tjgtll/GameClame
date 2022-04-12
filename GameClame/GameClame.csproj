@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <None Remove="Images\Background.png" />
+    <None Remove="Images\Bird\clouds.png" />
+    <None Remove="Images\Bird\clouds2.png" />
+    <None Remove="Images\Bird\flappyBird.png" />
     <None Remove="Images\Block-Empty.png" />
     <None Remove="Images\Block-I.png" />
     <None Remove="Images\Block-J.png" />
@@ -18,7 +21,6 @@
     <None Remove="Images\Block-Z.png" />
     <None Remove="Images\clouds.png" />
     <None Remove="Images\clouds2.png" />
-    <None Remove="Images\flappyBird.png" />
     <None Remove="Images\pipeBottom.png" />
     <None Remove="Images\pipeTop.png" />
     <None Remove="Images\TileBlue.png" />
@@ -32,38 +34,48 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\Background.png" />
-    <Resource Include="Images\Block-Empty.png" />
-    <Resource Include="Images\Block-I.png" />
-    <Resource Include="Images\Block-J.png" />
-    <Resource Include="Images\Block-L.png" />
-    <Resource Include="Images\Block-O.png" />
-    <Resource Include="Images\Block-S.png" />
-    <Resource Include="Images\Block-T.png" />
-    <Resource Include="Images\Block-Z.png" />
-    <Resource Include="Images\clouds.png">
+    <Resource Include="Images\Tetris\Background.png" />
+    <Resource Include="Images\Bird\clouds.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\clouds2.png">
+    <Resource Include="Images\Bird\clouds2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\flappyBird.png">
+    <Resource Include="Images\Bird\flappyBird.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\pipeBottom.png">
+    <Resource Include="Images\Tetris\Block-Empty.png" />
+    <Resource Include="Images\Tetris\Block-I.png" />
+    <Resource Include="Images\Tetris\Block-J.png" />
+    <Resource Include="Images\Tetris\Block-L.png" />
+    <Resource Include="Images\Tetris\Block-O.png" />
+    <Resource Include="Images\Tetris\Block-S.png" />
+    <Resource Include="Images\Tetris\Block-T.png" />
+    <Resource Include="Images\Tetris\Block-Z.png" />
+    <Resource Include="Images\Tetris\clouds.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\pipeTop.png">
+    <Resource Include="Images\Tetris\clouds2.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Images\TileBlue.png" />
-    <Resource Include="Images\TileCyan.png" />
-    <Resource Include="Images\TileEmpty.png" />
-    <Resource Include="Images\TileGreen.png" />
-    <Resource Include="Images\TileOrange.png" />
-    <Resource Include="Images\TilePurple.png" />
-    <Resource Include="Images\TileRed.png" />
-    <Resource Include="Images\TileYellow.png" />
+    <Resource Include="Images\Bird\pipeBottom.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Bird\pipeTop.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\Tetris\TileBlue.png" />
+    <Resource Include="Images\Tetris\TileCyan.png" />
+    <Resource Include="Images\Tetris\TileEmpty.png" />
+    <Resource Include="Images\Tetris\TileGreen.png" />
+    <Resource Include="Images\Tetris\TileOrange.png" />
+    <Resource Include="Images\Tetris\TilePurple.png" />
+    <Resource Include="Images\Tetris\TileRed.png" />
+    <Resource Include="Images\Tetris\TileYellow.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Images\Tic-Tak\" />
   </ItemGroup>
 
 </Project>
