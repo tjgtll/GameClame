@@ -23,6 +23,39 @@
     <None Remove="Images\clouds2.png" />
     <None Remove="Images\pipeBottom.png" />
     <None Remove="Images\pipeTop.png" />
+    <None Remove="Images\Tic-Taс\Grid.png" />
+    <None Remove="Images\Tic-Taс\O0.png" />
+    <None Remove="Images\Tic-Taс\O1.png" />
+    <None Remove="Images\Tic-Taс\O10.png" />
+    <None Remove="Images\Tic-Taс\O11.png" />
+    <None Remove="Images\Tic-Taс\O12.png" />
+    <None Remove="Images\Tic-Taс\O13.png" />
+    <None Remove="Images\Tic-Taс\O14.png" />
+    <None Remove="Images\Tic-Taс\O15.png" />
+    <None Remove="Images\Tic-Taс\O2.png" />
+    <None Remove="Images\Tic-Taс\O3.png" />
+    <None Remove="Images\Tic-Taс\O4.png" />
+    <None Remove="Images\Tic-Taс\O5.png" />
+    <None Remove="Images\Tic-Taс\O6.png" />
+    <None Remove="Images\Tic-Taс\O7.png" />
+    <None Remove="Images\Tic-Taс\O8.png" />
+    <None Remove="Images\Tic-Taс\O9.png" />
+    <None Remove="Images\Tic-Taс\X0.png" />
+    <None Remove="Images\Tic-Taс\X1.png" />
+    <None Remove="Images\Tic-Taс\X10.png" />
+    <None Remove="Images\Tic-Taс\X11.png" />
+    <None Remove="Images\Tic-Taс\X12.png" />
+    <None Remove="Images\Tic-Taс\X13.png" />
+    <None Remove="Images\Tic-Taс\X14.png" />
+    <None Remove="Images\Tic-Taс\X15.png" />
+    <None Remove="Images\Tic-Taс\X2.png" />
+    <None Remove="Images\Tic-Taс\X3.png" />
+    <None Remove="Images\Tic-Taс\X4.png" />
+    <None Remove="Images\Tic-Taс\X5.png" />
+    <None Remove="Images\Tic-Taс\X6.png" />
+    <None Remove="Images\Tic-Taс\X7.png" />
+    <None Remove="Images\Tic-Taс\X8.png" />
+    <None Remove="Images\Tic-Taс\X9.png" />
     <None Remove="Images\TileBlue.png" />
     <None Remove="Images\TileCyan.png" />
     <None Remove="Images\TileEmpty.png" />
@@ -72,10 +105,39 @@
     <Resource Include="Images\Tetris\TilePurple.png" />
     <Resource Include="Images\Tetris\TileRed.png" />
     <Resource Include="Images\Tetris\TileYellow.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Images\Tic-Tak\" />
+    <Resource Include="Images\Tic-Taс\Grid.png" />
+    <Resource Include="Images\Tic-Taс\O0.png" />
+    <Resource Include="Images\Tic-Taс\O1.png" />
+    <Resource Include="Images\Tic-Taс\O10.png" />
+    <Resource Include="Images\Tic-Taс\O11.png" />
+    <Resource Include="Images\Tic-Taс\O12.png" />
+    <Resource Include="Images\Tic-Taс\O13.png" />
+    <Resource Include="Images\Tic-Taс\O14.png" />
+    <Resource Include="Images\Tic-Taс\O15.png" />
+    <Resource Include="Images\Tic-Taс\O2.png" />
+    <Resource Include="Images\Tic-Taс\O3.png" />
+    <Resource Include="Images\Tic-Taс\O4.png" />
+    <Resource Include="Images\Tic-Taс\O5.png" />
+    <Resource Include="Images\Tic-Taс\O6.png" />
+    <Resource Include="Images\Tic-Taс\O7.png" />
+    <Resource Include="Images\Tic-Taс\O8.png" />
+    <Resource Include="Images\Tic-Taс\O9.png" />
+    <Resource Include="Images\Tic-Taс\X0.png" />
+    <Resource Include="Images\Tic-Taс\X1.png" />
+    <Resource Include="Images\Tic-Taс\X10.png" />
+    <Resource Include="Images\Tic-Taс\X11.png" />
+    <Resource Include="Images\Tic-Taс\X12.png" />
+    <Resource Include="Images\Tic-Taс\X13.png" />
+    <Resource Include="Images\Tic-Taс\X14.png" />
+    <Resource Include="Images\Tic-Taс\X15.png" />
+    <Resource Include="Images\Tic-Taс\X2.png" />
+    <Resource Include="Images\Tic-Taс\X3.png" />
+    <Resource Include="Images\Tic-Taс\X4.png" />
+    <Resource Include="Images\Tic-Taс\X5.png" />
+    <Resource Include="Images\Tic-Taс\X6.png" />
+    <Resource Include="Images\Tic-Taс\X7.png" />
+    <Resource Include="Images\Tic-Taс\X8.png" />
+    <Resource Include="Images\Tic-Taс\X9.png" />
   </ItemGroup>
 
 </Project>

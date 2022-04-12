@@ -10,6 +10,7 @@
     <Grid>
         <Button x:Name="FlappyBird" Content="Flappy Bird" HorizontalAlignment="Center" Margin="0,202,0,0" VerticalAlignment="Top" Width="155" Click="FlappyBird_Click"/>
         <Button x:Name="Tetris" Content="Tetris" HorizontalAlignment="Center" Margin="0,243,0,0" VerticalAlignment="Top" Width="156" Click="Tetris_Click"/>
+        <Button x:Name="TicTac" Content="Tic-Tac" HorizontalAlignment="Center" Margin="0,282,0,0" VerticalAlignment="Top" Width="156" Click="TicTac_Click"/>
 
     </Grid>
 </Window>

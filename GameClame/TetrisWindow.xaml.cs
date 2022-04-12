@@ -1,4 +1,4 @@
-﻿using GameClame.Model;
+﻿using GameClame.Tetris.Model;
 using System;
 using System.Threading.Tasks;
 using System.Windows;

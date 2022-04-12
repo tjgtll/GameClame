@@ -1,4 +1,5 @@
-﻿using System;
+﻿using GameClame.Model;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -31,6 +32,12 @@ namespace GameClame
         private void Tetris_Click(object sender, RoutedEventArgs e)
         {
             TetrisWindow OP = new TetrisWindow();
+            OP.Show();
+        }
+
+        private void TicTac_Click(object sender, RoutedEventArgs e)
+        {
+            Tic_TacWindow OP = new Tic_TacWindow();
             OP.Show();
         }
     }

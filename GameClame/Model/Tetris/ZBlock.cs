@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace GameClame.Model
+namespace GameClame.Tetris.Model
 {
     public class ZBlock : Block
     {
