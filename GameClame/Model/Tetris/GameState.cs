@@ -131,7 +131,7 @@ namespace GameClame.Tetris.Model
             }
 
             Score += TetrisGrid.ClearFullRows();
-
+            
             if (IsGameOver())
             {
                 GameOver = true;

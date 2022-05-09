@@ -26,6 +26,12 @@ namespace GameClame
             new BitmapImage(new Uri("Images/Tetris/TileRed.png", UriKind.Relative))
         };
 
+        private readonly ImageSource[] backgroundImage = new ImageSource[]
+        {
+            new BitmapImage(new Uri("Images/Tetris/Background.png", UriKind.Relative)),
+            new BitmapImage(new Uri("Images/Tetris/Background1.png", UriKind.Relative))
+        };
+
         private readonly ImageSource[] blockImages = new ImageSource[]
         {
             new BitmapImage(new Uri("Images/Tetris/Block-Empty.png", UriKind.Relative)),

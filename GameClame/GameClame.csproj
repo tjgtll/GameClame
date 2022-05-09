@@ -23,6 +23,8 @@
     <None Remove="Images\clouds2.png" />
     <None Remove="Images\pipeBottom.png" />
     <None Remove="Images\pipeTop.png" />
+    <None Remove="Images\Tetris\Background1.png" />
+    <None Remove="Images\Tetris\Background2.png" />
     <None Remove="Images\Tic-Taс\Grid.png" />
     <None Remove="Images\Tic-Taс\O0.png" />
     <None Remove="Images\Tic-Taс\O1.png" />
@@ -77,6 +79,8 @@
     <Resource Include="Images\Bird\flappyBird.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Images\Tetris\Background1.png" />
+    <Resource Include="Images\Tetris\Background2.png" />
     <Resource Include="Images\Tetris\Block-Empty.png" />
     <Resource Include="Images\Tetris\Block-I.png" />
     <Resource Include="Images\Tetris\Block-J.png" />
@@ -85,12 +89,6 @@
     <Resource Include="Images\Tetris\Block-S.png" />
     <Resource Include="Images\Tetris\Block-T.png" />
     <Resource Include="Images\Tetris\Block-Z.png" />
-    <Resource Include="Images\Tetris\clouds.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
-    <Resource Include="Images\Tetris\clouds2.png">
-      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
-    </Resource>
     <Resource Include="Images\Bird\pipeBottom.png">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
