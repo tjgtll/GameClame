@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Text;
 
 namespace GameClame.Tetris.Model
@@ -67,6 +68,8 @@ namespace GameClame.Tetris.Model
             {
                 grid[r, i] = 0;
             }
+
+            SystemSounds.Beep.Play();
         }
 
         private void MoveRowDown(int r,int numRows)

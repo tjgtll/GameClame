@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Media;
 using System.Text;
 
 namespace GameClame.Tetris.Model 
@@ -129,6 +130,9 @@ namespace GameClame.Tetris.Model
             {
                 TetrisGrid[p.Row, p.Column] = CurrentBlock.Id;
             }
+
+
+            
 
             Score += TetrisGrid.ClearFullRows();
             

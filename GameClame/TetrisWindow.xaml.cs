@@ -1,5 +1,6 @@
 ﻿using GameClame.Tetris.Model;
 using System;
+using System.Media;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -51,10 +52,18 @@ namespace GameClame
 
         private GameState gameState = new GameState();
 
+        private MediaPlayer mediaPlayer = new MediaPlayer();
+
         public TetrisWindow()
         {
+            //new Uri("Sound/ostTheme.wav", UriKind.Relative)
+            //new Uri(@"C:\Users\Admin\source\repos\GameClame\GameClame\Sound\ostTheme.wav")
             InitializeComponent();
             imageControls = SetupGameCanvas(gameState.TetrisGrid);
+            mediaPlayer.Open(new Uri("Sound/ostTheme.wav", UriKind.Relative));
+            mediaPlayer.Position = TimeSpan.Zero;
+            mediaPlayer.Volume = 1;
+            mediaPlayer.Play();
         }
 
         private Image[,] SetupGameCanvas(TetrisGrid grid)
