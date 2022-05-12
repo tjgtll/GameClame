@@ -48,7 +48,7 @@ namespace GameClame
         private readonly Image[,] imageControls;
         private readonly int maxDelay = 1000;
         private readonly int minDelay = 75;
-        private readonly int delayDecrease = 25;
+        private readonly int delayDecrease = 20;
 
         private GameState gameState = new GameState();
 
@@ -56,13 +56,10 @@ namespace GameClame
 
         public TetrisWindow()
         {
-            //new Uri("Sound/ostTheme.wav", UriKind.Relative)
-            //new Uri(@"C:\Users\Admin\source\repos\GameClame\GameClame\Sound\ostTheme.wav")
             InitializeComponent();
             imageControls = SetupGameCanvas(gameState.TetrisGrid);
-            mediaPlayer.Open(new Uri("Sound/ostTheme.wav", UriKind.Relative));
-            mediaPlayer.Position = TimeSpan.Zero;
-            mediaPlayer.Volume = 1;
+            mediaPlayer.Open(new Uri("Sound/ostTheme.wav", UriKind.RelativeOrAbsolute));
+            mediaPlayer.Volume = 0.5;
             mediaPlayer.Play();
         }
 

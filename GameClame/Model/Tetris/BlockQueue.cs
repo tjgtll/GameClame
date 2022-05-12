@@ -16,6 +16,10 @@ namespace GameClame.Tetris.Model
             new TBlock(),
             new ZBlock()
         };
+        
+        private readonly int[] randomBlocksInit = { 0, 1, 2, 3, 4, 5, 6 };
+
+        private List<int> randomBlocks = new List<int>();
 
         private readonly Random random = new Random();
 
@@ -28,7 +32,14 @@ namespace GameClame.Tetris.Model
 
         private Block RandomBlock()
         {
-            return blocks[random.Next(blocks.Length)];
+            if (randomBlocks.Count == 0)
+            {
+                randomBlocks = new List<int>(randomBlocksInit);
+            }
+
+            int randomBlock = randomBlocks[random.Next(randomBlocks.Count)];
+            randomBlocks.Remove(randomBlock);
+            return blocks[randomBlock];
         }
 
         public Block GetAndUpdate()

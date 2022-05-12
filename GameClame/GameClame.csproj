@@ -66,6 +66,8 @@
     <None Remove="Images\TilePurple.png" />
     <None Remove="Images\TileRed.png" />
     <None Remove="Images\TileYellow.png" />
+    <None Remove="Sound\ostTheme.mp3" />
+    <None Remove="Sound\ostTheme.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -136,6 +138,10 @@
     <Resource Include="Images\Tic-Taс\X7.png" />
     <Resource Include="Images\Tic-Taс\X8.png" />
     <Resource Include="Images\Tic-Taс\X9.png" />
+    <Resource Include="Sound\ostTheme.mp3" />
+    <Content Include="Sound\ostTheme.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

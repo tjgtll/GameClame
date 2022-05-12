@@ -131,9 +131,6 @@ namespace GameClame.Tetris.Model
                 TetrisGrid[p.Row, p.Column] = CurrentBlock.Id;
             }
 
-
-            
-
             Score += TetrisGrid.ClearFullRows();
             
             if (IsGameOver())
