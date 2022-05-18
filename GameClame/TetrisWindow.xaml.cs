@@ -15,6 +15,8 @@ namespace GameClame
     /// </summary>
     public partial class TetrisWindow : Window
     {
+        private bool IsPause = false;
+
         private readonly ImageSource[] tileImages = new ImageSource[]
         {
             new BitmapImage(new Uri("Images/Tetris/TileEmpty.png", UriKind.Relative)),
@@ -60,6 +62,14 @@ namespace GameClame
             imageControls = SetupGameCanvas(gameState.TetrisGrid);
             mediaPlayer.Open(new Uri("Sound/ostTheme.wav", UriKind.RelativeOrAbsolute));
             mediaPlayer.Volume = 0.5;
+            mediaPlayer.MediaEnded += MediaPlayer_Ended;
+            mediaPlayer.Play();
+
+        }
+
+        private void MediaPlayer_Ended(object sender, EventArgs e)
+        {
+            mediaPlayer.Position = TimeSpan.Zero;
             mediaPlayer.Play();
         }
 
@@ -155,6 +165,10 @@ namespace GameClame
 
             while (!gameState.GameOver)
             {
+                if (IsPause)
+                {
+                    return;
+                }
                 int delay = Math.Max(minDelay, maxDelay - (gameState.Score * delayDecrease));
                 await Task.Delay(delay);
                 gameState.MoveBlockDown();
@@ -196,6 +210,9 @@ namespace GameClame
                 case Key.Space:
                     gameState.DropBlock();
                     break;
+                case Key.Escape:
+                    Pause(sender,e);
+                    break;
                 default:
                     return;
             }
@@ -213,6 +230,33 @@ namespace GameClame
             gameState = new GameState();
             GameOverMenu.Visibility = Visibility.Hidden;
             await GameLoop();
+        }
+
+        private async void Pause(object sender, RoutedEventArgs e)
+        {
+            IsPause = true;
+            mediaPlayer.Pause();
+            GamePauseMenu.Visibility = Visibility.Visible;
+            PauseScoreText.Text = $"Счет: {gameState.Score}";
+        }
+
+        private async void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            mediaPlayer.Close();
+            this.Close();
+        }
+
+        private async void Play_Click(object sender, RoutedEventArgs e)
+        {
+            IsPause = false;
+            mediaPlayer.Play();
+            GamePauseMenu.Visibility = Visibility.Hidden;
+            await GameLoop();
+        }
+
+        private void RePlayAgain_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

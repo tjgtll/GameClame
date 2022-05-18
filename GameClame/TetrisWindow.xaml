@@ -75,7 +75,7 @@
               Visibility="Hidden">
             <StackPanel HorizontalAlignment="Center"
                         VerticalAlignment="Center">
-                <TextBlock Text="Game Over"
+                <TextBlock Text="Конец игры"
                            FontSize="48"
                            TextAlignment="Center"/>
 
@@ -84,11 +84,47 @@
                            FontSize="36"
                            TextAlignment="Center"/>
 
-                <Button Content="Play Again"
+                <Button Content="Играть снова"
                         Background="LightGreen"
                         Margin="0,20,0,0"
                         Padding="5"
                         Click="PlayAgain_Click"/>
+            </StackPanel>
+        </Grid>
+
+        <Grid x:Name="GamePauseMenu"
+              Background="#CC000000"
+              Grid.RowSpan="2"
+              Grid.ColumnSpan="3"
+              Visibility="Hidden">
+            <StackPanel HorizontalAlignment="Center"
+                        VerticalAlignment="Center">
+                <TextBlock Text="Пауза"
+                           FontSize="48"
+                           TextAlignment="Center"/>
+
+                <TextBlock x:Name="PauseScoreText"
+                           Text="Score: "
+                           FontSize="36"
+                           TextAlignment="Center"/>
+
+                <Button Content="Продолжить"
+                        Background="LightGreen"
+                        Margin="0,20,0,0"
+                        Padding="5"
+                        Click="Play_Click"/>
+
+                <Button Content="Заного"
+                        Background="LightGreen"
+                        Margin="0,20,0,0"
+                        Padding="5"
+                        Click="RePlayAgain_Click"/>
+
+                <Button Content="Выйти"
+                        Background="LightGreen"
+                        Margin="0,20,0,0"
+                        Padding="5"
+                        Click="Exit_Click"/>
             </StackPanel>
         </Grid>
     </Grid>

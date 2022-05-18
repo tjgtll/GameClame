@@ -68,6 +68,7 @@
     <None Remove="Images\TileYellow.png" />
     <None Remove="Sound\ostTheme.mp3" />
     <None Remove="Sound\ostTheme.wav" />
+    <None Remove="Sound\ostTheme_01.wav" />
   </ItemGroup>
 
   <ItemGroup>
@@ -140,6 +141,9 @@
     <Resource Include="Images\Tic-Taс\X9.png" />
     <Resource Include="Sound\ostTheme.mp3" />
     <Content Include="Sound\ostTheme.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Sound\ostTheme_01.wav">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
