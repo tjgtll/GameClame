@@ -17,6 +17,8 @@ namespace GameClame
     {
         private bool IsPause = false;
 
+        private bool IsSoundOff = true;
+
         private readonly ImageSource[] tileImages = new ImageSource[]
         {
             new BitmapImage(new Uri("Images/Tetris/TileEmpty.png", UriKind.Relative)),
@@ -169,6 +171,7 @@ namespace GameClame
                 {
                     return;
                 }
+
                 int delay = Math.Max(minDelay, maxDelay - (gameState.Score * delayDecrease));
                 await Task.Delay(delay);
                 gameState.MoveBlockDown();
@@ -234,8 +237,15 @@ namespace GameClame
 
         private async void Pause(object sender, RoutedEventArgs e)
         {
+            if (IsPause)
+            {
+                IsPause = false;
+                Draw(gameState);
+                GamePauseMenu.Visibility = Visibility.Hidden;
+                await GameLoop();
+                return;
+            }
             IsPause = true;
-            mediaPlayer.Pause();
             GamePauseMenu.Visibility = Visibility.Visible;
             PauseScoreText.Text = $"Счет: {gameState.Score}";
         }
@@ -249,14 +259,38 @@ namespace GameClame
         private async void Play_Click(object sender, RoutedEventArgs e)
         {
             IsPause = false;
+            Draw(gameState);
+            GamePauseMenu.Visibility = Visibility.Hidden;
+            await GameLoop();
+        }
+
+        private async void RePlayAgain_Click(object sender, RoutedEventArgs e)
+        {
+            gameState = new GameState();
+            IsPause = false;
             mediaPlayer.Play();
             GamePauseMenu.Visibility = Visibility.Hidden;
             await GameLoop();
         }
 
-        private void RePlayAgain_Click(object sender, RoutedEventArgs e)
+        private void Exit_Ended(object sender, EventArgs e)
         {
+            mediaPlayer.Close();
+            this.Close();
+        }
 
+        private void Music_Click(object sender, RoutedEventArgs e)
+        {
+            if (IsSoundOff)
+            {
+                mediaPlayer.Stop();
+                IsSoundOff = false;
+            }
+            else
+            {
+                mediaPlayer.Play();
+                IsSoundOff = true;
+            }
         }
     }
 }

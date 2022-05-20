@@ -9,6 +9,7 @@
         Foreground="White"
         FontFamily="Segoe UI Light" FontSize="28"
         KeyDown="Window_KeyDown"
+        Closed="Exit_Ended"
         WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
@@ -48,12 +49,14 @@
                     Grid.Column="0"
                     VerticalAlignment="Center"
                     HorizontalAlignment="Right">
+            
             <TextBlock Text="Удерживающий"
                        TextAlignment="Center"/>
 
             <Image x:Name="HoldImage"
                    Margin="20"
                    Width="125"/>
+            
         </StackPanel>
 
         <StackPanel Grid.Row="1"
@@ -68,6 +71,13 @@
                    Width="125"/>
         </StackPanel>
 
+        <StackPanel Grid.Row="1"
+                    Grid.Column="2"
+                    VerticalAlignment="Bottom"
+                    HorizontalAlignment="Right">
+            
+        </StackPanel>
+        
         <Grid x:Name="GameOverMenu"
               Background="#CC000000"
               Grid.RowSpan="2"
@@ -107,6 +117,12 @@
                            Text="Score: "
                            FontSize="36"
                            TextAlignment="Center"/>
+
+                <Button Content="Музыка"
+                        Background="LightGreen"
+                        Margin="0,0,0,0"
+                        Padding="0"
+                        Click="Music_Click"/>
 
                 <Button Content="Продолжить"
                         Background="LightGreen"
