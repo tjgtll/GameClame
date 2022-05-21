@@ -1,5 +1,10 @@
-﻿using GameClame.Tetris.Model;
+﻿using GameClame.Model.Tetris;
+using GameClame.Tetris.Model;
 using System;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.IO;
+using System.Linq;
 using System.Media;
 using System.Threading.Tasks;
 using System.Windows;
@@ -7,6 +12,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Xml.Serialization;
 
 namespace GameClame
 {
@@ -57,6 +63,11 @@ namespace GameClame
         private GameState gameState = new GameState();
 
         private MediaPlayer mediaPlayer = new MediaPlayer();
+
+        public ObservableCollection<Highscore> HighscoreList
+        {
+            get; set;
+        } = new ObservableCollection<Highscore>();
 
         public TetrisWindow()
         {
@@ -230,9 +241,29 @@ namespace GameClame
 
         private async void PlayAgain_Click(object sender, RoutedEventArgs e)
         {
+            int lowestHighscore = (this.HighscoreList.Count > 0 ? this.HighscoreList.Min(x => x.Score) : 0);
+            var value = Convert.ToInt32(FinalScoreText.Text[6.. (FinalScoreText.Text.Length)]);
+            if (value > lowestHighscore)
+            {
+                HighscoreList.Add(new Highscore()
+                {
+                    Score = value,
+                    PlayerName  = this.txtPlayerName.Text
+                });
+                SaveHighscoreList();
+            }
             gameState = new GameState();
             GameOverMenu.Visibility = Visibility.Hidden;
             await GameLoop();
+        }
+
+        private void SaveHighscoreList()
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(ObservableCollection<Highscore>));
+            using (Stream writer = new FileStream("highscorelist.xml", FileMode.Create))
+            {
+                serializer.Serialize(writer, this.HighscoreList);
+            }
         }
 
         private async void Pause(object sender, RoutedEventArgs e)
@@ -242,6 +273,7 @@ namespace GameClame
                 IsPause = false;
                 Draw(gameState);
                 GamePauseMenu.Visibility = Visibility.Hidden;
+                bdrHighscoreList.Visibility = Visibility.Collapsed;
                 await GameLoop();
                 return;
             }
@@ -291,6 +323,32 @@ namespace GameClame
                 mediaPlayer.Play();
                 IsSoundOff = true;
             }
+        }
+
+        private void LoadHighscoreList()
+        {
+            if (File.Exists("highscorelist.xml"))
+            {
+                XmlSerializer serializer = new XmlSerializer(typeof(List<Highscore>));
+                using (Stream reader = new FileStream("highscorelist.xml", FileMode.Open))
+                {
+                    List<Highscore> tempList = (List<Highscore>)serializer.Deserialize(reader);
+                    this.HighscoreList.Clear();
+                    foreach (var item in tempList.OrderByDescending(x => x.Score))
+                        this.HighscoreList.Add(item);
+                }
+            }
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            bdrHighscoreList.Visibility = Visibility.Collapsed;
+        }
+
+        private void Highscore_Click(object sender, RoutedEventArgs e)
+        {
+            LoadHighscoreList();
+            bdrHighscoreList.Visibility = Visibility.Visible;
         }
     }
 }
