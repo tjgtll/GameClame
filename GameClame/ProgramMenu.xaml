@@ -24,14 +24,7 @@
         <Border BorderBrush="Silver" BorderThickness="2" Width="350" Height="360" Canvas.Left="50" Canvas.Top="50" Name="bdrWelcomeMessage" Panel.ZIndex="1">
             <StackPanel Orientation="Vertical" Background="AliceBlue" Margin="0,0,0,0">
                 <TextBlock FontWeight="Bold" FontSize="50" HorizontalAlignment="Center" Margin="0,20,0,0">TetrisV</TextBlock>
-                <TextBlock TextWrapping="Wrap" Margin="15" FontSize="16">
-                    ↑ - повернуть блок направо <LineBreak />
-                    → - сдвинуть блок направо<LineBreak />
-                    ← - сдвинуть блок влево<LineBreak />
-                    ↓ - быстро опустить блок<LineBreak />
-                    z (я) - повернуть блок налево<LineBreak />
-                    c (ч) - удержать блок<LineBreak />
-                    пробел - опустить блок в самый низ</TextBlock>
+                <TextBlock TextWrapping="Wrap" Margin="15" FontSize="16"><Run Text="↑ - повернуть блок направо"/><LineBreak/><Run Text="→ - сдвинуть блок направо"/><LineBreak/><Run Text="← - сдвинуть блок влево"/><LineBreak/><Run Text="↓ - "/><Run Text="ускорить падение"/><Run Text=" блок"/><Run Text="а"/><LineBreak/><Run Text="z (я) - повернуть блок налево"/><LineBreak/><Run Text="c (ч) - удержать блок"/><LineBreak/><Run Text="пробел - уронить"/><Run Text=" "/><Run Text="блок"/></TextBlock>
                 <Button Margin="5" Width="150" Name="btnShowHighscoreList" Click="Highscore_Click" HorizontalAlignment="Center" Padding="10,3">Рекорды</Button>
                 <Button Margin="5" Width="150" Name="btnShowTetris" Click="Tetris_Click" HorizontalAlignment="Center" Padding="10,3">Tetris</Button>
             </StackPanel>

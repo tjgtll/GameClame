@@ -155,7 +155,7 @@
                         Click="Highscore_Click"/>
 
 
-                <Button Content="Заного"
+                <Button Content="Заново"
                         Background="LightGreen"
                         Margin="0,20,0,0"
                         Padding="5"
